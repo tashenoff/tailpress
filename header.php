@@ -61,8 +61,8 @@
 								class="mobile-menu lg:block hidden flex navbar w-full lg:h-auto h-screen lg:relative left-0 absolute lg:top-0 top-16 lg:bg-white bg-primary">
 								<ul
 									class="lg:px-0 px-10 menu w-full lg:flex lg:flex-nowrap justify-center items-center flex-wrap lg:justify-end">
-									<li><a href="">ГЛАВНАЯ</a></li>
-									<li><a href="">ОБ АССОЦИАЦИИ</a></li>
+									<li><a href="#">ГЛАВНАЯ</a></li>
+									<li><a href="#">ОБ АССОЦИАЦИИ</a></li>
 									<li class="submenu-trigger flex flex-col group relative ">
 
 
@@ -103,7 +103,7 @@
 														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 												</svg>
 
-												<a href="info.html">Для членов ПАО</a>
+												<a href="#">Для членов ПАО</a>
 											</li>
 											<li>
 												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -112,7 +112,7 @@
 														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 												</svg>
 
-												<a href="auto.html">Обучение</a>
+												<a href="#">Обучение</a>
 											</li>
 											<li>
 												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -121,7 +121,7 @@
 														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 												</svg>
 
-												<a href="support.html">Кандидатам</a>
+												<a href="#">Кандидатам</a>
 											</li>
 											<li>
 												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -130,7 +130,7 @@
 														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 												</svg>
 
-												<a href="support.html">Другие</a>
+												<a href="#">Другие</a>
 											</li>
 
 										</ul>
