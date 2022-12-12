@@ -1,91 +1,203 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 	<?php wp_head(); ?>
+
+
+	<script>
+		var $ = jQuery.noConflict();
+
+
+
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$('#menu-top').addClass("bg-primary shadow-sm border-b border-black border-opacity-20");
+					// $('#menu-top').removeClass("border-b");
+				} else {
+					$('#menu-top').removeClass("bg-primary");
+					$('#menu-top').addClass("border-b");
+				}
+			});
+		});
+
+
+	</script>
+
+
+
 </head>
 
-<body <?php body_class( 'bg-white text-gray-900 antialiased' ); ?>>
+<body>
 
-<?php do_action( 'tailpress_site_before' ); ?>
+	<?php do_action('tailpress_site_before'); ?>
 
-<div id="page" class="min-h-screen flex flex-col">
+	<div id="page" class="min-h-screen flex flex-col">
 
-	<?php do_action( 'tailpress_header' ); ?>
+		<?php do_action('tailpress_header'); ?>
 
-	<header>
+		<header>
 
-		<div class="mx-auto container">
-			<div class="lg:flex lg:justify-between lg:items-center border-b py-6">
-				<div class="flex justify-between items-center">
-					<div>
-						<?php if ( has_custom_logo() ) { ?>
-                            <?php the_custom_logo(); ?>
-						<?php } else { ?>
-							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
-								<?php echo get_bloginfo( 'name' ); ?>
-							</a>
 
-							<p class="text-sm font-light text-gray-600">
-								<?php echo get_bloginfo( 'description' ); ?>
-							</p>
+			<div id="menu-top" class="bg-white text-black w-full lg:px-5 lg:py-0 transition-all fixed z-50">
+				<div class="container mx-auto">
+					<div class="flex lg:p-0 p-5 w-full justify-between items-center ">
+						<a href="/" class="">
 
-						<?php } ?>
-					</div>
-
-					<div class="lg:hidden">
-						<a href="#" aria-label="Toggle navigation" id="primary-menu-toggle">
-							<svg viewBox="0 0 20 20" class="inline-block w-6 h-6" version="1.1"
-								 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-								<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-									<g id="icon-shape">
-										<path d="M0,3 L20,3 L20,5 L0,5 L0,3 Z M0,9 L20,9 L20,11 L0,11 L0,9 Z M0,15 L20,15 L20,17 L0,17 L0,15 Z"
-											  id="Combined-Shape"></path>
-									</g>
-								</g>
-							</svg>
+							<img class="mr-5 lg:w-full w-[200px]" src="<?php bloginfo('template_url'); ?>/img/logo.svg"
+								alt="">
 						</a>
+
+
+						<div class="flex w-full items-center">
+
+							<nav
+								class="mobile-menu lg:block hidden flex navbar w-full lg:h-auto h-screen lg:relative left-0 absolute lg:top-0 top-16 lg:bg-white bg-primary">
+								<ul
+									class="lg:px-0 px-10 menu w-full lg:flex lg:flex-nowrap justify-center items-center flex-wrap lg:justify-end">
+									<li><a href="">ГЛАВНАЯ</a></li>
+									<li><a href="">ОБ АССОЦИАЦИИ</a></li>
+									<li class="submenu-trigger flex flex-col group relative ">
+
+
+										<a class="group flex lg:items-center w-full lg:justify-center justify-between text-left"
+											href="#">
+
+
+											<span>
+												ДОКУМЕНТЫ
+											</span>
+
+											<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+												stroke-width="1.5" stroke="currentColor"
+												class="group-hover:rotate-180 transition-all w-4 h-3 ml-4">
+												<path stroke-linecap="round" stroke-linejoin="round"
+													d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+											</svg>
+
+
+
+										</a>
+
+										<ul
+											class="submenu hidden left-0 lg:shadow-xl lg:top-20 top-0 lg:group-hover:block text-primary  lg:absolute bg-white">
+											<li>
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+													stroke-width="1.5" stroke="currentColor" class="mr-3 w-4 h-4">
+													<path stroke-linecap="round" stroke-linejoin="round"
+														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+												</svg>
+
+												<a class="" href="soft.html">НПА</a>
+											</li>
+											<li>
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+													stroke-width="1.5" stroke="currentColor" class="mr-3 w-4 h-4">
+													<path stroke-linecap="round" stroke-linejoin="round"
+														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+												</svg>
+
+												<a href="info.html">Для членов ПАО</a>
+											</li>
+											<li>
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+													stroke-width="1.5" stroke="currentColor" class="mr-3 w-4 h-4">
+													<path stroke-linecap="round" stroke-linejoin="round"
+														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+												</svg>
+
+												<a href="auto.html">Обучение</a>
+											</li>
+											<li>
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+													stroke-width="1.5" stroke="currentColor" class="mr-3 w-4 h-4">
+													<path stroke-linecap="round" stroke-linejoin="round"
+														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+												</svg>
+
+												<a href="support.html">Кандидатам</a>
+											</li>
+											<li>
+												<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+													stroke-width="1.5" stroke="currentColor" class="mr-3 w-4 h-4">
+													<path stroke-linecap="round" stroke-linejoin="round"
+														d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+												</svg>
+
+												<a href="support.html">Другие</a>
+											</li>
+
+										</ul>
+
+
+									</li>
+									<li><a href="">СОТРУДНИЧЕСТВО </a></li>
+									<li><a href="kontakty/">КОНТАКТЫ </a></li>
+
+
+
+
+
+
+									<div
+										class="flex items-center lg:mt-0 mt-5  phone lg:border-l border-black border-opacity-10">
+										<div
+											class="lg:bg-primary bg-white lg:mx-5 mr-5 rounded-full w-8 h-8 flex items-center justify-center">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+												fill="currentColor" class="w-5 h-5 lg:text-white text-primary">
+												<path fill-rule="evenodd"
+													d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+													clip-rule="evenodd" />
+											</svg>
+
+										</div>
+
+										<a class="lg:text-black text-white" href="">+7 (7172) 51 69 14</a>
+										<!-- <button class="btn btn-primary lg:block hidden">Написать нам</button> -->
+									</div>
+
+
+								</ul>
+
+
+
+
+
+
+							</nav>
+
+
+
+
+						</div>
+
+
+
+
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-10 h-10 hamburger mobile-menu-trigger lg:hidden">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+						</svg>
+
+
 					</div>
 				</div>
-
-				<?php
-				wp_nav_menu(
-					array(
-						'container_id'    => 'primary-menu',
-						'container_class' => 'hidden bg-gray-100 mt-4 p-4 lg:mt-0 lg:p-0 lg:bg-transparent lg:block',
-						'menu_class'      => 'lg:flex lg:-mx-4',
-						'theme_location'  => 'primary',
-						'li_class'        => 'lg:mx-4',
-						'fallback_cb'     => false,
-					)
-				);
-				?>
 			</div>
-		</div>
-	</header>
 
-	<div id="content" class="site-content flex-grow">
 
-		<?php if ( is_front_page() ) { ?>
-			<!-- Start introduction -->
-			<div class="container mx-auto my-12 border-b pb-12">
-				<h1 class="font-bold text-lg text-secondary uppercase">TailPress</h1>
-				<h2 class="text-3xl lg:text-7xl tracking-tight font-extrabold my-4">Rapidly build your WordPress theme
-					with <a href="https://tailwindcss.com" class="text-primary">Tailwind CSS</a>.</h2>
-				<p class="max-w-screen-lg text-gray-700 text-lg font-medium mb-10">TailPress is your go-to starting
-					point for developing WordPress themes with TailwindCSS and comes with basic block-editor support out
-					of the box.</p>
-				<a href="https://github.com/jeffreyvr/tailpress"
-					class="w-full sm:w-auto flex-none bg-gray-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">View
-					on Github</a>
-			</div>
-			<!-- End introduction -->
-		<?php } ?>
+		</header>
 
-		<?php do_action( 'tailpress_content_start' ); ?>
+		<div id="content" class="site-content">
 
-		<main>
+
+
+			<?php do_action('tailpress_content_start'); ?>
+
+			<main>
