@@ -1,4 +1,4 @@
-<section class="bg home-bg block block__dark relative">
+<section class="bg home-bg block block__dark relative lg:mt-[85px] mt-[80px]">
 
 <div class="flex items-center h-[200px] justify-center flex-wrap w-full">
 

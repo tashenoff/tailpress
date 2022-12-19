@@ -72,6 +72,18 @@ function tailpress_asset( $path ) {
 	return add_query_arg( 'time', time(),  get_stylesheet_directory_uri() . '/' . $path );
 }
 
+
+
+function excerpt($num) {
+    $limit = $num+1;
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt)."... (<a href='" .get_permalink($post->ID) ." '>Read more</a>)";
+    echo $excerpt;
+}
+
+
+
 /**
  * Adds option 'li_class' to 'wp_nav_menu'.
  *
