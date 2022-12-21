@@ -158,7 +158,7 @@
 
 										</div>
 
-										<a class="lg:text-black text-white" href="">+7 (7172) 51 69 14</a>
+										<a class="lg:text-black text-white" href=""><?php the_field('phone'); ?></a>
 										<!-- <button class="btn btn-primary lg:block hidden">Написать нам</button> -->
 									</div>
 
