@@ -369,7 +369,7 @@
 
 
 
-                <?php if ( $page = 'pao' ) { ?>
+                <?php if ( $page = 'other' ) { ?>
                     <!-- Start npa -->
 
 
