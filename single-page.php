@@ -61,13 +61,7 @@
                 <div class="border-b border-primary w-full mb-5 border-opacity-20">
                 <h2 class="mb-5 font-bold uppercase">
                     
-                <?php
-                $about_home = get_field('about_home');
-                if ($hero): ?>
-
-<?php echo get_field($about_home['title']); ?>
-
-<?php endif; ?>
+                <h2><?php the_field('heading'); ?></h2>
 
 
 </h2>
